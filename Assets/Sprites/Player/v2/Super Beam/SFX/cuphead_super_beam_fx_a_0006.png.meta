@@ -484,7 +484,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_super_beam_fx_a_0006_0: 235986331038890130
+      cuphead_super_beam_fx_a_0006_1: 3407558284969910160
+      cuphead_super_beam_fx_a_0006_10: -2448985668363785964
+      cuphead_super_beam_fx_a_0006_11: -6049806269730083594
+      cuphead_super_beam_fx_a_0006_12: -8984772879872010551
+      cuphead_super_beam_fx_a_0006_13: 1286117287561060277
+      cuphead_super_beam_fx_a_0006_14: -6358899995808022658
+      cuphead_super_beam_fx_a_0006_2: 1524414494535802836
+      cuphead_super_beam_fx_a_0006_3: -1139404778545902108
+      cuphead_super_beam_fx_a_0006_4: -4825213246148171813
+      cuphead_super_beam_fx_a_0006_5: 3057035698344991186
+      cuphead_super_beam_fx_a_0006_6: 72588240028672029
+      cuphead_super_beam_fx_a_0006_7: 2662301223533819197
+      cuphead_super_beam_fx_a_0006_8: -6518135303244172687
+      cuphead_super_beam_fx_a_0006_9: 3286550712040296797
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

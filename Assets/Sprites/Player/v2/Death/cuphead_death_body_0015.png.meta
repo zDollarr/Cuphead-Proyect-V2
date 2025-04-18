@@ -459,7 +459,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_death_body_0015_0: 3205813033614854054
+      cuphead_death_body_0015_1: -530220063829221374
+      cuphead_death_body_0015_10: 355820902483843691
+      cuphead_death_body_0015_11: 5983354283959954603
+      cuphead_death_body_0015_12: -3308770430125925768
+      cuphead_death_body_0015_13: -1518949831496186586
+      cuphead_death_body_0015_2: -4119885685160470279
+      cuphead_death_body_0015_3: 2161518531471962013
+      cuphead_death_body_0015_4: 7793470112499438305
+      cuphead_death_body_0015_5: -1015962235940441053
+      cuphead_death_body_0015_6: 6066707848339426150
+      cuphead_death_body_0015_7: -466962078894886066
+      cuphead_death_body_0015_8: -6779360736119967290
+      cuphead_death_body_0015_9: 8218305055472549617
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

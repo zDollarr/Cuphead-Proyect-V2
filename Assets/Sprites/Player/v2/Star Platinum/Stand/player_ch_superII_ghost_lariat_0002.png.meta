@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player_ch_superII_ghost_lariat_0002_0: -2649793446364042335
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

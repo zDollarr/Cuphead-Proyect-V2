@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_dash_air_0005_0: 1900827185248857642
+      cuphead_dash_air_0005_1: -4228254629153172516
+      cuphead_dash_air_0005_2: -7026313704137268974
+      cuphead_dash_air_0005_3: 5545395951938106984
+      cuphead_dash_air_0005_4: -6149862400994420947
+      cuphead_dash_air_0005_5: 6708459321718242483
+      cuphead_dash_air_0005_6: 7236330637116579679
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

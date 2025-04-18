@@ -484,7 +484,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ch_charm_parry_attack_spark_0002_0: -3856342363136172993
+      ch_charm_parry_attack_spark_0002_1: -5820110428729270401
+      ch_charm_parry_attack_spark_0002_10: 1671911939521037631
+      ch_charm_parry_attack_spark_0002_11: 2429521348067803167
+      ch_charm_parry_attack_spark_0002_12: 3780375198230678908
+      ch_charm_parry_attack_spark_0002_13: 4397480281974604759
+      ch_charm_parry_attack_spark_0002_14: 3600054946726176844
+      ch_charm_parry_attack_spark_0002_2: -4136478356582574873
+      ch_charm_parry_attack_spark_0002_3: 2885376028215949411
+      ch_charm_parry_attack_spark_0002_4: -8482812480945489823
+      ch_charm_parry_attack_spark_0002_5: -8606772872199493892
+      ch_charm_parry_attack_spark_0002_6: -4200994385762634443
+      ch_charm_parry_attack_spark_0002_7: -2612316977932836577
+      ch_charm_parry_attack_spark_0002_8: 8431229450095884169
+      ch_charm_parry_attack_spark_0002_9: 6706559637806176613
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

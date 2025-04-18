@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_death_body_0006_0: -7673610028952833122
+      cuphead_death_body_0006_1: 9168528476860852115
+      cuphead_death_body_0006_2: 4374547669452010828
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

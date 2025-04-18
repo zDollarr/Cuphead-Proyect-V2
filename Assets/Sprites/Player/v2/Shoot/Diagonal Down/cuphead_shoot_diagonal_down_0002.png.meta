@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_shoot_diagonal_down_0002_0: 458527388971872194
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

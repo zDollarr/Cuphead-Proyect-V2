@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player_ch_superII_bodyfloat_0011_0: -1098187668321871743
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

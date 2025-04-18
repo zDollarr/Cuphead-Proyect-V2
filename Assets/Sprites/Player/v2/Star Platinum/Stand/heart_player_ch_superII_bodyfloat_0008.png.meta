@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      heart_player_ch_superII_bodyfloat_0008_0: -4310901024141981231
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

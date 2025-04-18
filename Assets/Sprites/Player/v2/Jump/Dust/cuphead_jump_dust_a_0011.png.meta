@@ -659,7 +659,29 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_jump_dust_a_0011_0: 5214568832608301521
+      cuphead_jump_dust_a_0011_1: 6092216142861780652
+      cuphead_jump_dust_a_0011_10: 290257343889280141
+      cuphead_jump_dust_a_0011_11: 2762769081706774105
+      cuphead_jump_dust_a_0011_12: 2208417882588049491
+      cuphead_jump_dust_a_0011_13: 8263543881375637076
+      cuphead_jump_dust_a_0011_14: -6969914210545201141
+      cuphead_jump_dust_a_0011_15: -6934306187179970437
+      cuphead_jump_dust_a_0011_16: 7638169523236496086
+      cuphead_jump_dust_a_0011_17: -112556086452712762
+      cuphead_jump_dust_a_0011_18: -5813378911604034227
+      cuphead_jump_dust_a_0011_19: -3334424715202821004
+      cuphead_jump_dust_a_0011_2: -6395858580656977264
+      cuphead_jump_dust_a_0011_20: -7371198419062382916
+      cuphead_jump_dust_a_0011_21: 5678185691657676282
+      cuphead_jump_dust_a_0011_3: -4941671436623870370
+      cuphead_jump_dust_a_0011_4: 4934391352256139864
+      cuphead_jump_dust_a_0011_5: 6886110716093008905
+      cuphead_jump_dust_a_0011_6: -5626993456602580750
+      cuphead_jump_dust_a_0011_7: -6614679551366023940
+      cuphead_jump_dust_a_0011_8: -8358343504842395856
+      cuphead_jump_dust_a_0011_9: -6775651529155023309
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

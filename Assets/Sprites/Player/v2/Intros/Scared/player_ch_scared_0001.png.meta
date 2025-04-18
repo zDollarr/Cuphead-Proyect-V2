@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player_ch_scared_0001_0: 6214437830557940083
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

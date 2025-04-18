@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_super_beam_0009_0: -6784975817385025925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

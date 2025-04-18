@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_explode_fx_0007_0: 179558831820415155
+      cuphead_explode_fx_0007_1: -5751799897795528862
+      cuphead_explode_fx_0007_2: -5592296956524268446
+      cuphead_explode_fx_0007_3: -1738780594745428494
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

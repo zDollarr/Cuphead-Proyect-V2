@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_ex_diagonal_up_0012_0: -8257578259076250174
+      cuphead_ex_diagonal_up_0012_1: -6218129337047003737
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

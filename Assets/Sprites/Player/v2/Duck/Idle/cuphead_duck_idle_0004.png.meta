@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_duck_idle_0004_0: -1580413532187428555
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_shoot_down_boil_0002_0: 7535587333952041142
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

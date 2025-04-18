@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ch_charm_parry_attack_0002_0: -4236942099157446870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

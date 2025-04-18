@@ -659,7 +659,29 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_death_body_0014_0: -940805275674838558
+      cuphead_death_body_0014_1: 5180221431122658269
+      cuphead_death_body_0014_10: -8026246242608960191
+      cuphead_death_body_0014_11: -401939621802216765
+      cuphead_death_body_0014_12: -2733699526223231512
+      cuphead_death_body_0014_13: 3536881518761557854
+      cuphead_death_body_0014_14: -8867489667584752187
+      cuphead_death_body_0014_15: -7955664650870827602
+      cuphead_death_body_0014_16: -454741055831327771
+      cuphead_death_body_0014_17: 86161813038941115
+      cuphead_death_body_0014_18: -3616767881582851730
+      cuphead_death_body_0014_19: -5468626084096268549
+      cuphead_death_body_0014_2: 4217206431161867703
+      cuphead_death_body_0014_20: -8194285856040937340
+      cuphead_death_body_0014_21: -4365597666098878919
+      cuphead_death_body_0014_3: -7529177109515243772
+      cuphead_death_body_0014_4: -7113867638893531373
+      cuphead_death_body_0014_5: 1099232724899202671
+      cuphead_death_body_0014_6: 9106936844325647518
+      cuphead_death_body_0014_7: 2496489672502535595
+      cuphead_death_body_0014_8: 9048698396684629782
+      cuphead_death_body_0014_9: 4919695477138195402
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -734,7 +734,32 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_super_beam_0020_0: 8875836483152979358
+      cuphead_super_beam_0020_1: -5069888659561208353
+      cuphead_super_beam_0020_10: -5121750248296515405
+      cuphead_super_beam_0020_11: 7911509017667807355
+      cuphead_super_beam_0020_12: 3000254851978043291
+      cuphead_super_beam_0020_13: -7774950395862123600
+      cuphead_super_beam_0020_14: -3100153949869243743
+      cuphead_super_beam_0020_15: 859433018570377670
+      cuphead_super_beam_0020_16: 1954209468761340529
+      cuphead_super_beam_0020_17: -7851330751236530978
+      cuphead_super_beam_0020_18: -6900317353979814121
+      cuphead_super_beam_0020_19: 6936360986092529188
+      cuphead_super_beam_0020_2: 8705385155679615980
+      cuphead_super_beam_0020_20: -5896984838239695555
+      cuphead_super_beam_0020_21: -2258653033543138055
+      cuphead_super_beam_0020_22: -2500795421593452649
+      cuphead_super_beam_0020_23: 8149959260166681868
+      cuphead_super_beam_0020_24: -2326904920840784809
+      cuphead_super_beam_0020_3: -220950808235065437
+      cuphead_super_beam_0020_4: -8149084494005767466
+      cuphead_super_beam_0020_5: -2398888863908763187
+      cuphead_super_beam_0020_6: 5281308961577200032
+      cuphead_super_beam_0020_7: 438241224116296843
+      cuphead_super_beam_0020_8: 8377410950979059381
+      cuphead_super_beam_0020_9: -1051851813129345182
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

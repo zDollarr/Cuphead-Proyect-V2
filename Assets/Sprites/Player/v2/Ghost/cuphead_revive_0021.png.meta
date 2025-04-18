@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_revive_0021_0: 2348832420926515167
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

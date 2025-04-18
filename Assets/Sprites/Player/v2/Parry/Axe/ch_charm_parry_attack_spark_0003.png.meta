@@ -759,7 +759,33 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ch_charm_parry_attack_spark_0003_0: -9138266047417074909
+      ch_charm_parry_attack_spark_0003_1: 4722469506799440215
+      ch_charm_parry_attack_spark_0003_10: -1470089045614949327
+      ch_charm_parry_attack_spark_0003_11: -2900010673004329559
+      ch_charm_parry_attack_spark_0003_12: 2061782482415669251
+      ch_charm_parry_attack_spark_0003_13: -2364422558721867418
+      ch_charm_parry_attack_spark_0003_14: -1809554298039883686
+      ch_charm_parry_attack_spark_0003_15: -2487380900865295168
+      ch_charm_parry_attack_spark_0003_16: -7993740338446620426
+      ch_charm_parry_attack_spark_0003_17: -7252788523879976486
+      ch_charm_parry_attack_spark_0003_18: 3336113751461522341
+      ch_charm_parry_attack_spark_0003_19: -2631379082991061119
+      ch_charm_parry_attack_spark_0003_2: 5700338816872379521
+      ch_charm_parry_attack_spark_0003_20: -7132396278442811597
+      ch_charm_parry_attack_spark_0003_21: -3362878087926543886
+      ch_charm_parry_attack_spark_0003_22: 5282165106391612662
+      ch_charm_parry_attack_spark_0003_23: -9096728634503123477
+      ch_charm_parry_attack_spark_0003_24: -4962527458417905777
+      ch_charm_parry_attack_spark_0003_25: 6743575937909349632
+      ch_charm_parry_attack_spark_0003_3: 4297872954650120754
+      ch_charm_parry_attack_spark_0003_4: -6515570034301757971
+      ch_charm_parry_attack_spark_0003_5: 8679749320068650497
+      ch_charm_parry_attack_spark_0003_6: 1162117486941292062
+      ch_charm_parry_attack_spark_0003_7: -3029797119903516602
+      ch_charm_parry_attack_spark_0003_8: 7709532612212000960
+      ch_charm_parry_attack_spark_0003_9: -7746617065518417273
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_slap_spark_0002_0: 7770360021188580352
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

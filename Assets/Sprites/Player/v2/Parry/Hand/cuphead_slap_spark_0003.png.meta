@@ -684,7 +684,30 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_slap_spark_0003_0: -28986703833336471
+      cuphead_slap_spark_0003_1: 5884867063302764890
+      cuphead_slap_spark_0003_10: 1867011249970819878
+      cuphead_slap_spark_0003_11: -5702937153550207717
+      cuphead_slap_spark_0003_12: 6856553551844306439
+      cuphead_slap_spark_0003_13: 2446050700076378396
+      cuphead_slap_spark_0003_14: -8010894106304598169
+      cuphead_slap_spark_0003_15: -4145955763081946788
+      cuphead_slap_spark_0003_16: -4429022508911822053
+      cuphead_slap_spark_0003_17: 169179513289384532
+      cuphead_slap_spark_0003_18: 5276142647096633898
+      cuphead_slap_spark_0003_19: -5577731458670865724
+      cuphead_slap_spark_0003_2: -7782748803890331584
+      cuphead_slap_spark_0003_20: 4051492358036686878
+      cuphead_slap_spark_0003_21: 8070924977134566457
+      cuphead_slap_spark_0003_22: -8174921617193764940
+      cuphead_slap_spark_0003_3: 4563571010705009992
+      cuphead_slap_spark_0003_4: -2448807062002237702
+      cuphead_slap_spark_0003_5: 5517682095192587551
+      cuphead_slap_spark_0003_6: 4305242959392499901
+      cuphead_slap_spark_0003_7: -521568389403619196
+      cuphead_slap_spark_0003_8: -8948011578705096124
+      cuphead_slap_spark_0003_9: 7592639769010640223
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

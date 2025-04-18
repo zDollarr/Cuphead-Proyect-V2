@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_run_shoot_turnaround_0001_0: 8251593261330431075
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -759,7 +759,33 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_explode_fx_0016_0: 6671858702323240700
+      cuphead_explode_fx_0016_1: -3988632814985635873
+      cuphead_explode_fx_0016_10: -6930259702005057942
+      cuphead_explode_fx_0016_11: 6214150185922663236
+      cuphead_explode_fx_0016_12: 8799961391618615835
+      cuphead_explode_fx_0016_13: -169094306293209950
+      cuphead_explode_fx_0016_14: 366307865699828784
+      cuphead_explode_fx_0016_15: 3321187485386554550
+      cuphead_explode_fx_0016_16: 4879916408487167733
+      cuphead_explode_fx_0016_17: -4175390300273380984
+      cuphead_explode_fx_0016_18: 165780332098448541
+      cuphead_explode_fx_0016_19: 1167749612638027373
+      cuphead_explode_fx_0016_2: -4503719965788518799
+      cuphead_explode_fx_0016_20: -1868662446234725750
+      cuphead_explode_fx_0016_21: -7161039151521277136
+      cuphead_explode_fx_0016_22: -6962997158176834910
+      cuphead_explode_fx_0016_23: -4704462839186323989
+      cuphead_explode_fx_0016_24: 3823374116992931568
+      cuphead_explode_fx_0016_25: 4826109011176406414
+      cuphead_explode_fx_0016_3: 2477066325098269339
+      cuphead_explode_fx_0016_4: -6961846887560664220
+      cuphead_explode_fx_0016_5: -3457144832443973148
+      cuphead_explode_fx_0016_6: -4393528173009165777
+      cuphead_explode_fx_0016_7: -1755865839704183208
+      cuphead_explode_fx_0016_8: -962646333910723471
+      cuphead_explode_fx_0016_9: 6774446745517786575
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

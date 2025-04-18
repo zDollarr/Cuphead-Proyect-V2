@@ -31,14 +31,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isCrouching)
         {
-            rb2d.velocity = new Vector2(0, rb2d.velocity.y); // No se mueve mientras se agacha
+            rb2d.linearVelocity = new Vector2(0, rb2d.linearVelocity.y); // No se mueve mientras se agacha
             anim.SetBool("run", false);
             return;
         }
 
         float h = Input.GetAxisRaw("Horizontal");
 
-        rb2d.velocity = new Vector2(h * moveSpeed, rb2d.velocity.y);
+        rb2d.linearVelocity = new Vector2(h * moveSpeed, rb2d.linearVelocity.y);
         anim.SetBool("run", h != 0 && isGrounded); // Solo correr si está en el suelo
 
         if (h > 0)
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce);
+            rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, jumpForce);
             anim.SetBool("jump", true);
             isGrounded = false;
             rb2d.gravityScale = gravityScale; // Aplicar gravedad aumentada tan pronto como salte

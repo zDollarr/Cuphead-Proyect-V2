@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player_ch_scared_0008_0: 8022702749592407106
+      player_ch_scared_0008_1: 860737497737215955
+      player_ch_scared_0008_2: -5373749140639263128
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

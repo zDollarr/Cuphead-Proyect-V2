@@ -984,7 +984,42 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_death_body_0011_0: -8901007037277893843
+      cuphead_death_body_0011_1: -3302330781695525052
+      cuphead_death_body_0011_10: 5905930037918651787
+      cuphead_death_body_0011_11: -2800702767933154379
+      cuphead_death_body_0011_12: -2815664799721887238
+      cuphead_death_body_0011_13: -8217434357001421451
+      cuphead_death_body_0011_14: 4093198442640706270
+      cuphead_death_body_0011_15: -2650029184636975534
+      cuphead_death_body_0011_16: 5305821222858985058
+      cuphead_death_body_0011_17: -5478348366728214291
+      cuphead_death_body_0011_18: -1750608175142279035
+      cuphead_death_body_0011_19: -811647825606549649
+      cuphead_death_body_0011_2: 7005129282866641016
+      cuphead_death_body_0011_20: -4372142320955062747
+      cuphead_death_body_0011_21: 8758230465816570294
+      cuphead_death_body_0011_22: -1990951837376309549
+      cuphead_death_body_0011_23: -3621874002443939024
+      cuphead_death_body_0011_24: 4497154631010963775
+      cuphead_death_body_0011_25: 8108492293490850665
+      cuphead_death_body_0011_26: 8314308482234376732
+      cuphead_death_body_0011_27: -5625653890621142383
+      cuphead_death_body_0011_28: 4117652671495730501
+      cuphead_death_body_0011_29: 5718555301099015981
+      cuphead_death_body_0011_3: -8474857715295935489
+      cuphead_death_body_0011_30: -1994344179601600916
+      cuphead_death_body_0011_31: 8839411981246407076
+      cuphead_death_body_0011_32: 5285623966218898250
+      cuphead_death_body_0011_33: -683506277521872267
+      cuphead_death_body_0011_34: 155247209465418228
+      cuphead_death_body_0011_4: -6168732345014223200
+      cuphead_death_body_0011_5: 2470439890614904717
+      cuphead_death_body_0011_6: -1620673443231325682
+      cuphead_death_body_0011_7: -3499840453571127435
+      cuphead_death_body_0011_8: 9182682872568403968
+      cuphead_death_body_0011_9: -7071055907193575933
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

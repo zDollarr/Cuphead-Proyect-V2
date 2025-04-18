@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ch_superIII_shadow_0023_0: 8309796368630506385
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

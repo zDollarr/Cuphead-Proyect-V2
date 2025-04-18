@@ -259,7 +259,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_jump_dust_a_0006_0: 2092352034116835693
+      cuphead_jump_dust_a_0006_1: -5545657010748075206
+      cuphead_jump_dust_a_0006_2: 583800426674438208
+      cuphead_jump_dust_a_0006_3: 8680735545218028301
+      cuphead_jump_dust_a_0006_4: -8929637483966989066
+      cuphead_jump_dust_a_0006_5: 7779835136729865041
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

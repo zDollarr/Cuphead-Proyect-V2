@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cuphead_duck_turn_0001_mirrored_0: -2052587946465620327
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
