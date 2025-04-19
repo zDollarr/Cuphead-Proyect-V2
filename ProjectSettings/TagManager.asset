@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Piso
   layers:
   - Default
   - TransparentFX
