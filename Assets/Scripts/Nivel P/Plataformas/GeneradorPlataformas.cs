@@ -15,39 +15,77 @@ public class GeneradorPlataformas : MonoBehaviour
     [Range(0, 100)] public int probabilidadApilamiento = 20; // 20% de chance
     public float offsetVerticalApilamiento = 1f; // Distancia vertical entre plataformas apiladas
 
-    private Vector2 ultimaPosicion;
+    [Header("Plataformas Fijas")]
+    [Range(0, 100)] public int probabilidadFija = 50; // 50% de chance de ser fija
+
+    [Header("Generación hacia atrás")]
+    public bool generarIzquierda = true; // Permitir generación hacia la izquierda
+    public float distanciaGeneracionIzquierda = 10f; // Distancia para generar hacia la izquierda
+
+    private Vector2 ultimaPosicionDerecha; // Última posición generada hacia la derecha
+    private Vector2 ultimaPosicionIzquierda; // Última posición generada hacia la izquierda
 
     void Start()
     {
-        ultimaPosicion = transform.position;
+        ultimaPosicionDerecha = transform.position;
+        ultimaPosicionIzquierda = transform.position;
+
         GenerarPlataformasIniciales();
     }
 
     void GenerarPlataformasIniciales()
     {
+        // Generar plataformas iniciales hacia adelante
         for (int i = 0; i < plataformasIniciales; i++)
         {
-            GenerarPlataforma();
+            GenerarPlataformaDerecha();
+        }
+
+        // Generar plataformas iniciales hacia atrás si está habilitado
+        if (generarIzquierda)
+        {
+            for (int i = 0; i < plataformasIniciales; i++)
+            {
+                GenerarPlataformaIzquierda();
+            }
         }
     }
 
-    void GenerarPlataforma()
+    void Update()
     {
-        float nuevaX = ultimaPosicion.x + Random.Range(distanciaMinima, distanciaMaxima);
+        if (jugador == null) return;
+
+        // Generar plataformas hacia adelante (derecha)
+        if (jugador.position.x + 10f > ultimaPosicionDerecha.x)
+        {
+            GenerarPlataformaDerecha();
+        }
+
+        // Generar plataformas hacia atrás (izquierda)
+        if (generarIzquierda && jugador.position.x - distanciaGeneracionIzquierda < ultimaPosicionIzquierda.x)
+        {
+            GenerarPlataformaIzquierda();
+        }
+    }
+
+    void GenerarPlataformaDerecha()
+    {
+        float nuevaX = ultimaPosicionDerecha.x + Random.Range(distanciaMinima, distanciaMaxima);
+        float nuevaY = Random.Range(alturaMinima, alturaMaxima);
+        Vector2 nuevaPosicion = new Vector2(nuevaX, nuevaY);
+        
+        GenerarPlataformaEnPosicion(nuevaPosicion);
+        ultimaPosicionDerecha = nuevaPosicion;
+    }
+
+    void GenerarPlataformaIzquierda()
+    {
+        float nuevaX = ultimaPosicionIzquierda.x - Random.Range(distanciaMinima, distanciaMaxima);
         float nuevaY = Random.Range(alturaMinima, alturaMaxima);
         Vector2 nuevaPosicion = new Vector2(nuevaX, nuevaY);
 
-        // Generar la plataforma base
         GenerarPlataformaEnPosicion(nuevaPosicion);
-
-        // Verificar si debe apilarse otra plataforma encima (según probabilidad)
-        if (Random.Range(0, 100) < probabilidadApilamiento)
-        {
-            Vector2 posicionApilada = new Vector2(nuevaPosicion.x, nuevaPosicion.y + offsetVerticalApilamiento);
-            GenerarPlataformaEnPosicion(posicionApilada);
-        }
-
-        ultimaPosicion = nuevaPosicion;
+        ultimaPosicionIzquierda = nuevaPosicion;
     }
 
     void GenerarPlataformaEnPosicion(Vector2 posicion)
@@ -61,20 +99,23 @@ public class GeneradorPlataformas : MonoBehaviour
                 Quaternion.identity
             );
 
-            Rigidbody2D rb = nuevaPlataforma.GetComponent<Rigidbody2D>();
-            if (rb == null) rb = nuevaPlataforma.AddComponent<Rigidbody2D>();
+            // Decidir si la plataforma será fija o tendrá físicas activas
+            if (Random.Range(0, 100) < probabilidadFija)
+            {
+                // Plataforma fija (sin físicas)
+                Rigidbody2D rb = nuevaPlataforma.GetComponent<Rigidbody2D>();
+                if (rb != null) Destroy(rb); // Eliminar Rigidbody2D si existe
+            }
+            else
+            {
+                // Plataforma con físicas activas
+                Rigidbody2D rb = nuevaPlataforma.GetComponent<Rigidbody2D>();
+                if (rb == null) rb = nuevaPlataforma.AddComponent<Rigidbody2D>();
 
-            rb.linearDamping = 2f;
-            rb.gravityScale = 1f;
-            rb.freezeRotation = true;
-        }
-    }
-
-    void Update()
-    {
-        if (jugador != null && jugador.position.x > ultimaPosicion.x - 10f)
-        {
-            GenerarPlataforma();
-        }
+                rb.linearDamping = 2f;
+                rb.gravityScale = 1f;
+                rb.freezeRotation = true;
+            }}
     }
 }
+

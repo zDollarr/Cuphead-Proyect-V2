@@ -3,78 +3,94 @@ using UnityEngine;
 
 public class GeneradorEdificiosLejanos : MonoBehaviour
 {
-    public GameObject[] prefabsEdificios; // Arrastra los prefabs aquí
-    public int cantidadMaxima = 5; // Cantidad máxima de edificios visibles
-    public float distanciaMinimaEntreEdificios = 4f; // Evita amontonamiento
-    public float distanciaParaGenerar = 30f; // Distancia para generar nuevos edificios
-    public float opacidadMinima = 0.7f; // Opacidad mínima de los edificios
-    public float alturaBase = -3.09f; // Altura fija para alinear los edificios con la base del nivel
+    public GameObject[] prefabsEdificios; // Prefabs de edificios
+    public Transform jugador; // Referencia al jugador
 
-    private Dictionary<Vector2, GameObject> edificiosGenerados = new Dictionary<Vector2, GameObject>();
-    private Vector2 ultimaPosicionJugador;
+    [Header("Configuración de Generación")]
+    public float distanciaMinimaX = 5f; // Distancia mínima entre edificios
+    public float distanciaMaximaX = 10f; // Distancia máxima entre edificios
+    public float alturaMinima = -2f; // Altura mínima de los edificios
+    public float alturaMaxima = 2f; // Altura máxima de los edificios
+    public int edificiosIniciales = 2; // Cantidad inicial de edificios
+    public float distanciaGeneracion = 15f; // Distancia para generar nuevos edificios
+
+    private Vector2 ultimaPosicionDerecha; // Última posición generada hacia la derecha
+    private Vector2 ultimaPosicionIzquierda; // Última posición generada hacia la izquierda
+    private HashSet<Vector2> posicionesGeneradas = new HashSet<Vector2>(); // Evitar duplicados
 
     void Start()
     {
-        // Generar edificios iniciales
+        ultimaPosicionDerecha = jugador.position;
+        ultimaPosicionIzquierda = jugador.position;
+
         GenerarEdificiosIniciales();
     }
 
     void Update()
     {
-        // Generar nuevos edificios si el jugador avanza más allá de la distancia definida
-        if (Vector2.Distance(Vector2.zero, ultimaPosicionJugador) >= distanciaParaGenerar)
+        if (jugador == null) return;
+
+        // Generar edificios hacia la derecha
+        if (jugador.position.x + distanciaGeneracion > ultimaPosicionDerecha.x)
         {
-            GenerarEdificiosEnRango();
-            ultimaPosicionJugador = Vector2.zero;
+            GenerarEdificioDerecha();
+        }
+
+        // Generar edificios hacia la izquierda
+        if (jugador.position.x - distanciaGeneracion < ultimaPosicionIzquierda.x)
+        {
+            GenerarEdificioIzquierda();
         }
     }
 
     void GenerarEdificiosIniciales()
     {
-        // Generar edificios en un rango inicial
-        GenerarEdificiosEnRango();
-    }
-
-    void GenerarEdificiosEnRango()
-    {
-        // Calcular el rango visible en el eje X basado en la cámara
-        float rangoVisibleX = Camera.main.orthographicSize * Camera.main.aspect;
-
-        int edificiosGeneradosEnEstaIteracion = 0;
-
-        for (float x = -rangoVisibleX; x <= rangoVisibleX; x += distanciaMinimaEntreEdificios)
+        // Generar edificios iniciales hacia adelante
+        for (int i = 0; i < edificiosIniciales; i++)
         {
-            // Detener la generación si ya alcanzamos el límite de cantidad máxima
-            if (edificiosGenerados.Count + edificiosGeneradosEnEstaIteracion >= cantidadMaxima)
-                break;
+            GenerarEdificioDerecha();
+        }
 
-            Vector2 posicion = new Vector2(x, alturaBase); // Altura fija para alinear con la base del nivel
-
-            // Verificar si ya existe un edificio en esta posición
-            if (!edificiosGenerados.ContainsKey(posicion))
-            {
-                // Generar un nuevo edificio
-                int indiceAleatorio = Random.Range(0, prefabsEdificios.Length);
-                GameObject edificio = Instantiate(
-                    prefabsEdificios[indiceAleatorio],
-                    posicion,
-                    Quaternion.identity,
-                    transform
-                );
-
-                // Configurar opacidad
-                SpriteRenderer renderer = edificio.GetComponent<SpriteRenderer>();
-                if (renderer != null)
-                {
-                    Color color = renderer.color;
-                    color.a = Random.Range(opacidadMinima, 1f);
-                    renderer.color = color;
-                }
-
-                // Registrar el edificio generado
-                edificiosGenerados[posicion] = edificio;
-                edificiosGeneradosEnEstaIteracion++;
-            }
+        // Generar edificios iniciales hacia atrás
+        for (int i = 0; i < edificiosIniciales; i++)
+        {
+            GenerarEdificioIzquierda();
         }
     }
+
+    void GenerarEdificioDerecha()
+    {
+        float nuevaX = ultimaPosicionDerecha.x + Random.Range(distanciaMinimaX, distanciaMaximaX);
+        float nuevaY = Random.Range(alturaMinima, alturaMaxima);
+        Vector2 nuevaPosicion = new Vector2(nuevaX, nuevaY);
+
+        if (!posicionesGeneradas.Contains(nuevaPosicion))
+        {
+            GenerarEdificioEnPosicion(nuevaPosicion);
+            ultimaPosicionDerecha = nuevaPosicion;
+            posicionesGeneradas.Add(nuevaPosicion);
+        }
+    }
+
+    void GenerarEdificioIzquierda()
+    {
+        float nuevaX = ultimaPosicionIzquierda.x - Random.Range(distanciaMinimaX, distanciaMaximaX);
+        float nuevaY = Random.Range(alturaMinima, alturaMaxima);
+        Vector2 nuevaPosicion = new Vector2(nuevaX, nuevaY);
+
+        if (!posicionesGeneradas.Contains(nuevaPosicion))
+        {
+            GenerarEdificioEnPosicion(nuevaPosicion);
+            ultimaPosicionIzquierda = nuevaPosicion;
+            posicionesGeneradas.Add(nuevaPosicion);
+        }
+    }
+
+    void GenerarEdificioEnPosicion(Vector2 posicion)
+    {
+        // Instanciar un edificio en la posición especificada
+        int indiceAleatorio = Random.Range(0, prefabsEdificios.Length);
+        Instantiate(prefabsEdificios[indiceAleatorio], posicion, Quaternion.identity, transform);
+    }
 }
+

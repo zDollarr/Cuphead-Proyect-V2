@@ -34,16 +34,17 @@ public class GeneradorFondos : MonoBehaviour
 
     void SeguirJugador()
     {
-        if (jugador != null)
+        if (Camera.main != null)
         {
-            // Actualizar la posición del fondo para que siga al jugador
+            // Actualizar la posición del fondo para que siga a la cámara
             renderizadorFondo.transform.position = new Vector3(
-                jugador.position.x,
-                jugador.position.y,
+                Camera.main.transform.position.x,
+                Camera.main.transform.position.y,
                 renderizadorFondo.transform.position.z // Mantener el plano Z
             );
         }
     }
+
 
     void CambiarFondo()
     {

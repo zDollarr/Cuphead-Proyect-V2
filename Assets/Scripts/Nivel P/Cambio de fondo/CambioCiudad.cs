@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CambioCiudad : MonoBehaviour
@@ -9,6 +10,7 @@ public class CambioCiudad : MonoBehaviour
     public float duracionFade = 1f; // Duración del desvanecido (0 = sin fade)
     public float toleranciaRegreso = 1f; // Tolerancia para detectar si el jugador regresa al inicio
 
+    private Dictionary<int, int> fondosGenerados = new Dictionary<int, int>(); // Almacena los fondos generados por posición
     private Vector2 posicionInicialJugador; // Posición inicial del jugador
     private Vector2 ultimaPosicionJugador;
     private int indiceFondoActual;
@@ -47,44 +49,38 @@ public class CambioCiudad : MonoBehaviour
         // Guardar la posición inicial del jugador
         posicionInicialJugador = jugador.position;
         ultimaPosicionJugador = jugador.position;
+
+        // Registrar el fondo inicial
+        fondosGenerados[CalcularClavePosicion(jugador.position)] = indiceFondoInicial;
     }
 
     void Update()
     {
-        // Detectar si el jugador regresa a la posición inicial
-        if (Vector2.Distance(jugador.position, posicionInicialJugador) <= toleranciaRegreso)
-        {
-            CambiarFondoInicial();
-            return;
-        }
+        int clavePosicion = CalcularClavePosicion(jugador.position);
 
-        // Cambia el fondo si el jugador avanza la distancia especificada
-        if (Vector2.SqrMagnitude((Vector2)jugador.position - ultimaPosicionJugador) >= distanciaCambio * distanciaCambio)
+        // Detectar si el jugador regresa a una posición anterior
+        if (fondosGenerados.ContainsKey(clavePosicion))
         {
-            CambiarFondo();
+            CambiarFondoExistente(fondosGenerados[clavePosicion]);
+        }
+        else if (Vector2.SqrMagnitude((Vector2)jugador.position - ultimaPosicionJugador) >= distanciaCambio * distanciaCambio)
+        {
+            CambiarFondoNuevo(clavePosicion);
             ultimaPosicionJugador = jugador.position;
         }
     }
 
-    void CambiarFondo()
+    void CambiarFondoExistente(int indiceFondo)
     {
-        if (duracionFade > 0)
-            StartCoroutine(FadeYCambiar());
-        else
-            CambiarFondoInstantaneo();
-    }
-
-    void CambiarFondoInicial()
-    {
-        if (indiceFondoActual != indiceFondoInicial) // Solo cambiar si no es el fondo inicial
+        if (indiceFondoActual != indiceFondo)
         {
-            indiceFondoActual = indiceFondoInicial;
-            renderizadorFondo.sprite = fondosCiudades[indiceFondoInicial];
+            indiceFondoActual = indiceFondo;
+            renderizadorFondo.sprite = fondosCiudades[indiceFondo];
             AjustarFondo();
         }
     }
 
-    void CambiarFondoInstantaneo()
+    void CambiarFondoNuevo(int clavePosicion)
     {
         int nuevoIndice;
         do
@@ -95,6 +91,14 @@ public class CambioCiudad : MonoBehaviour
         indiceFondoActual = nuevoIndice;
         renderizadorFondo.sprite = fondosCiudades[indiceFondoActual];
         AjustarFondo();
+
+        // Registrar el nuevo fondo
+        fondosGenerados[clavePosicion] = nuevoIndice;
+    }
+
+    int CalcularClavePosicion(Vector2 posicion)
+    {
+        return Mathf.FloorToInt(posicion.x / distanciaCambio);
     }
 
     void AjustarFondo()
@@ -117,33 +121,4 @@ public class CambioCiudad : MonoBehaviour
             renderizadorFondo.transform.position.y,
             0 // Aseguramos que esté en el plano Z correcto
         );
-    }
-
-    System.Collections.IEnumerator FadeYCambiar()
-    {
-        // Validar que el material soporte transparencia
-        if (!renderizadorFondo.material.HasProperty("_Color"))
-        {
-            Debug.LogError("El material del SpriteRenderer no soporta transparencia.");
-            yield break;
-        }
-
-        // Fade Out
-        for (float t = 0; t < duracionFade; t += Time.deltaTime)
-        {
-            float alpha = Mathf.Lerp(1, 0, t / duracionFade);
-            renderizadorFondo.color = new Color(1, 1, 1, alpha);
-            yield return null;
-        }
-
-        CambiarFondoInstantaneo();
-
-        // Fade In
-        for (float t = 0; t < duracionFade; t += Time.deltaTime)
-        {
-            float alpha = Mathf.Lerp(0, 1, t / duracionFade);
-            renderizadorFondo.color = new Color(1, 1, 1, alpha);
-            yield return null;
-        }
-    }
-}
+    }}
